@@ -1,5 +1,6 @@
 ﻿using BFH.Demo.Contracts;
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -22,8 +23,11 @@ namespace BFH.Demo.Implementation
 
         public DemoEnum NextValue(DemoEnum enumValue)
         {
-            throw new NotImplementedException();
+            IList values = Enum.GetValues(typeof(DemoEnum));
+            var index = values.IndexOf(enumValue);
+            return (DemoEnum)values[index + 1];
         }
+         
 
 
         public IList<DemoData> Update(DemoData data, int amount)
