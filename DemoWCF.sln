@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BFH.Demo.Implementation", "
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BFH.Demo.Host", "BFH.Demo.Host\BFH.Demo.Host.csproj", "{2DA6BEED-B657-4FEE-B96E-3C381DFDDC50}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BFH.Demo.ClientUI", "BFH.Demo.ClientUI\BFH.Demo.ClientUI.csproj", "{F5BD72BB-6807-4C54-BD7B-50DADB9E1F69}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{2DA6BEED-B657-4FEE-B96E-3C381DFDDC50}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2DA6BEED-B657-4FEE-B96E-3C381DFDDC50}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2DA6BEED-B657-4FEE-B96E-3C381DFDDC50}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F5BD72BB-6807-4C54-BD7B-50DADB9E1F69}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F5BD72BB-6807-4C54-BD7B-50DADB9E1F69}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F5BD72BB-6807-4C54-BD7B-50DADB9E1F69}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F5BD72BB-6807-4C54-BD7B-50DADB9E1F69}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -7,6 +7,20 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="350" Width="525">
     <Grid>
+        <DockPanel>
+            <StackPanel DockPanel.Dock="Bottom" Orientation="Horizontal" HorizontalAlignment="Right">
+                <Button Click="AppDomain_Clicked">App Domain</Button>
+                <Button Click="SetValue_Clicked">Set Value</Button>
+                <Button Click="GetValue_Clicked">Get Value</Button>
+                <Button Click="NextEnum_Clicked">Next Enum</Button>
+                <Button Click="FillList_Clicked">Fill in List</Button>
+            </StackPanel>
+            <TextBlock Name="AppDomainNameServer" DockPanel.Dock="Top" />
+            <TextBox Name="ValueEntry" DockPanel.Dock="Top" />
+            <TextBlock Name="ValueRead" DockPanel.Dock="Top" />
+            <ComboBox Name="EnumValue" DockPanel.Dock="Top"/>
+            <ListBox Name="DetailList"  />
+        </DockPanel>
         
     </Grid>
 </Window>

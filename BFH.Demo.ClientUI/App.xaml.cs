@@ -13,5 +13,17 @@ namespace BFH.Demo.ClientUI
     /// </summary>
     public partial class App : Application
     {
+        protected override void OnStartup(StartupEventArgs e)
+        {
+            base.OnStartup(e);
+            DispatcherUnhandledException += App_DispatcherUnhandledException;
+            AttributeTargets target;
+        }
+
+        private void App_DispatcherUnhandledException(object sender, System.Windows.Threading.DispatcherUnhandledExceptionEventArgs e)
+        {
+            MessageBox.Show(e.Exception.Message, "Demo Client Error", MessageBoxButton.OK);
+            e.Handled = true;
+        }
     }
 }

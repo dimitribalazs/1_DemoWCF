@@ -12,7 +12,10 @@ namespace BFH.Demo.Implementation
     {
   
         private double _internalValue;
-        public string GetApplicationDomainName() => AppDomain.CurrentDomain.FriendlyName;
+        public string GetApplicationDomainName()
+        {
+            return AppDomain.CurrentDomain.FriendlyName;
+        }
 
         public double GetValue() => _internalValue;
 
