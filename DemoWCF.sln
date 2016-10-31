@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BFH.Demo.Contracts", "BFH.Demo.Contracts\BFH.Demo.Contracts.csproj", "{077396F7-47FE-469C-BA56-12FEDAA71CC6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BFH.Demo.Implementation", "BFH.Demo.Implementation\BFH.Demo.Implementation.csproj", "{611E6A5C-7ABF-4AEA-A2AD-DDD541880271}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{077396F7-47FE-469C-BA56-12FEDAA71CC6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{077396F7-47FE-469C-BA56-12FEDAA71CC6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{077396F7-47FE-469C-BA56-12FEDAA71CC6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{077396F7-47FE-469C-BA56-12FEDAA71CC6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{611E6A5C-7ABF-4AEA-A2AD-DDD541880271}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{611E6A5C-7ABF-4AEA-A2AD-DDD541880271}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{611E6A5C-7ABF-4AEA-A2AD-DDD541880271}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{611E6A5C-7ABF-4AEA-A2AD-DDD541880271}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

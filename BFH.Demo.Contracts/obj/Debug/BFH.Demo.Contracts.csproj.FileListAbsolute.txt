@@ -1,0 +1,1 @@
+\\mac\home\documents\visual studio 2015\Projects\DemoWCF\BFH.Demo.Contracts\obj\Debug\BFH.Demo.Contracts.csprojResolveAssemblyReference.cache
