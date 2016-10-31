@@ -35,6 +35,8 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -48,6 +50,16 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BFH.Demo.Contracts\BFH.Demo.Contracts.csproj">
+      <Project>{077396f7-47fe-469c-ba56-12fedaa71cc6}</Project>
+      <Name>BFH.Demo.Contracts</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\BFH.Demo.Implementation\BFH.Demo.Implementation.csproj">
+      <Project>{611e6a5c-7abf-4aea-a2ad-ddd541880271}</Project>
+      <Name>BFH.Demo.Implementation</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

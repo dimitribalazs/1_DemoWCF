@@ -12,11 +12,12 @@ namespace BFH.Demo.Host
     {
         static void Main(string[] args)
         {
+            ServiceHost serviceHost = null;
             try
             {
 
                 Console.WriteLine("Starting Host");
-                ServiceHost serviceHost = null;
+                
 
                 try
                 {
@@ -35,6 +36,10 @@ namespace BFH.Demo.Host
             {
                 Console.WriteLine($"Exception: {ex.Message}");
                 Console.ReadKey();
+            }
+            finally
+            {
+                serviceHost?.Close();
             }
         }
     }

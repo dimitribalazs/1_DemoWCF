@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BFH.Demo.Contracts", "BFH.D
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BFH.Demo.Implementation", "BFH.Demo.Implementation\BFH.Demo.Implementation.csproj", "{611E6A5C-7ABF-4AEA-A2AD-DDD541880271}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BFH.Demo.Host", "BFH.Demo.Host\BFH.Demo.Host.csproj", "{2DA6BEED-B657-4FEE-B96E-3C381DFDDC50}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{611E6A5C-7ABF-4AEA-A2AD-DDD541880271}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{611E6A5C-7ABF-4AEA-A2AD-DDD541880271}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{611E6A5C-7ABF-4AEA-A2AD-DDD541880271}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2DA6BEED-B657-4FEE-B96E-3C381DFDDC50}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2DA6BEED-B657-4FEE-B96E-3C381DFDDC50}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2DA6BEED-B657-4FEE-B96E-3C381DFDDC50}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2DA6BEED-B657-4FEE-B96E-3C381DFDDC50}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

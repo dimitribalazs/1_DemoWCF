@@ -1,1 +1,6 @@
 \\mac\home\documents\visual studio 2015\Projects\DemoWCF\BFH.Demo.Contracts\obj\Debug\BFH.Demo.Contracts.csprojResolveAssemblyReference.cache
+\\Mac\Google Drive\BFH\Code\DemoWCF\BFH.Demo.Contracts\bin\Debug\BFH.Demo.Contracts.dll
+\\Mac\Google Drive\BFH\Code\DemoWCF\BFH.Demo.Contracts\bin\Debug\BFH.Demo.Contracts.pdb
+\\Mac\Google Drive\BFH\Code\DemoWCF\BFH.Demo.Contracts\obj\Debug\BFH.Demo.Contracts.csprojResolveAssemblyReference.cache
+\\Mac\Google Drive\BFH\Code\DemoWCF\BFH.Demo.Contracts\obj\Debug\BFH.Demo.Contracts.dll
+\\Mac\Google Drive\BFH\Code\DemoWCF\BFH.Demo.Contracts\obj\Debug\BFH.Demo.Contracts.pdb
