@@ -1,4 +1,5 @@
-﻿using BFH.Demo.Contracts;
+﻿using BFH.Common;
+using BFH.Demo.Contracts;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -23,6 +24,7 @@ namespace BFH.Demo.ClientUI
     /// </summary>
     public partial class MainWindow : Window
     {
+
         public MainWindow()
         {
             InitializeComponent();
@@ -30,47 +32,59 @@ namespace BFH.Demo.ClientUI
 
         private void AppDomain_Clicked(object sender, RoutedEventArgs e)
         {
-            IDemo proxy = null;
-            try
+
+            using (var factory = new WcfFactory<IDemo>())
             {
-                //create channel erstellt den proxy
-                proxy = ChannelFactory<IDemo>.CreateChannel(new BasicHttpBinding(), new EndpointAddress("http://localhost:4711/DemoService"));
-                AppDomainNameServer.Text = proxy.GetApplicationDomainName();
+                AppDomainNameServer.Text = factory.Proxy.GetApplicationDomainName();
             }
-            catch (Exception)
-            { 
-                throw;
-            }
-            finally
-            {
-                var channel = proxy as IChannel;
-                if (channel != null && channel.State == CommunicationState.Opened)
-                {
-                    channel.Close();                    
-                }
-            }
-            
+
         }
 
         private void GetValue_Clicked(object sender, RoutedEventArgs e)
         {
+            //create channel erstellt den 
+            var factory = new WcfFactory<IDemo>();
+            ValueRead.Text = factory.Proxy.GetValue().ToString();
 
         }
 
         private void SetValue_Clicked(object sender, RoutedEventArgs e)
         {
+            //create channel erstellt den 
+            var factory = new WcfFactory<IDemo>();
+            var entry = Convert.ToDouble(ValueEntry.Text);
+            factory.Proxy.SetValue(entry);
 
         }
 
         private void NextEnum_Clicked(object sender, RoutedEventArgs e)
         {
-
+            //create channel erstellt den 
+            using (var factory = new WcfFactory<IDemo>())
+            {
+                var result = factory.Proxy.NextValue(DemoEnum.Unknown);
+                EnumValue.Text = Enum.GetName(typeof(DemoEnum), result);
+            }
         }
 
 
         private void FillList_Clicked(object sender, RoutedEventArgs e)
         {
+            var demoData = new DemoData
+            {
+                Data = new byte[] { 0x99 },
+                Date = DateTime.MinValue,
+                EnumValue = DemoEnum.Large,
+                Id = Guid.NewGuid(),
+                Name = "Test",
+                Value = 22d
+            };
 
+            var factory = new WcfFactory<IDemo>();
+            var result = factory.Proxy.Update(demoData, 20);
+            factory.CloseProxy();
+
+            result.ToList().ForEach(r => DetailList.Items.Add(r.Data + " " + r.Date + "  " + r.Id + " " + r.Name + " " + r.Value));
         }
     }
 }

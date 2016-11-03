@@ -23,7 +23,8 @@ namespace BFH.Demo.Host
                 {
                     //konkreter type. muss instanzierbar sein
                     serviceHost = new ServiceHost(typeof(Demo.Implementation.Demo));
-                    serviceHost.AddServiceEndpoint(typeof(IDemo), new BasicHttpBinding(), "http://localhost:4711/DemoService");
+                    //BasicHttpBinding doesnt allow Sessions, so one Instance per Call
+                    serviceHost.AddServiceEndpoint(typeof(IDemo), new WSHttpBinding(), "http://localhost:4711/DemoService");
                     serviceHost.Open();
                 }
                 catch(Exception ex)

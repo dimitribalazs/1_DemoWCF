@@ -3,21 +3,29 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using System.ServiceModel;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace BFH.Demo.Implementation
 {
+    [ServiceBehavior(InstanceContextMode = InstanceContextMode.PerSession)]
     public class Demo : IDemo
     {
-  
         private double _internalValue;
+
+        public Demo()
+        {
+        }
         public string GetApplicationDomainName()
         {
             return AppDomain.CurrentDomain.FriendlyName;
         }
 
-        public double GetValue() => _internalValue;
+        public double GetValue()
+        {
+            return _internalValue;
+        }
 
         public void SetValue(double value)
         {
@@ -36,11 +44,12 @@ namespace BFH.Demo.Implementation
         public IList<DemoData> Update(DemoData data, int amount)
         {
             var demoData = new List<DemoData>(amount);
+            data.Name += "Roundtrip";
             demoData.Add(data);
 
-            data.Name += "Roundtrip";
+            
 
-            for (int index = 0; index < amount; index++) ;
+            for (int index = 0; index < amount; index++)
             {
                 demoData.Add(GenerateDemoDataObject());
             }

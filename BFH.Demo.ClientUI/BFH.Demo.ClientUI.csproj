@@ -37,6 +37,7 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Data" />
+    <Reference Include="System.Data.Linq" />
     <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.ServiceModel" />
     <Reference Include="System.Xml" />
@@ -98,6 +99,10 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\BFH.Common\BFH.Common.csproj">
+      <Project>{19f8a24b-0a24-43a8-a955-b94c44c5c6ca}</Project>
+      <Name>BFH.Common</Name>
+    </ProjectReference>
     <ProjectReference Include="..\BFH.Demo.Contracts\BFH.Demo.Contracts.csproj">
       <Project>{077396f7-47fe-469c-ba56-12fedaa71cc6}</Project>
       <Name>BFH.Demo.Contracts</Name>
